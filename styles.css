@@ -1,0 +1,117 @@
+:root {
+  --fgColor: #ffffff; /* foreground color */
+  --bgColor: #212121; /* background color */
+  --linkColor: lightgrey;
+  --font: "Roboto"; /* custom font */
+  --leftMargin: 10%;
+  --LinkBoardContainersPerRow: 3;
+  --numberOfBackgroundImages: 9;
+  --animationSpeed: 0.2s;
+  /* speed for animations when hovering/resizing */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: var(--font), Roboto, "DejaVu Sans", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  color: var(--fgColor);
+  background-color: var(--bgColor);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+}
+
+.infoContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  max-width: 480px;
+  margin-top: 10%;
+  margin-left: var(--leftMargin);
+}
+
+.gridForIconsAndLinkBoards {
+  display: grid;
+  width: 80%;
+  margin-top: 15%;
+  margin-left: var(--leftMargin);
+  grid-template-columns: 350px 1fr;
+  /*1fr = 1 Fraction of remaining length */
+  grid-gap: 2em;
+}
+
+.gridForIcons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*1fr = 1 Fraction of remaining length */
+}
+
+.icon {
+  display: flex;
+  font-size: 3rem;
+  color: var(--linkColor);
+}
+
+.icon:hover {
+  color: var(--fgColor);
+}
+
+.container {
+  display: flex;
+}
+
+.gridLinkBoards {
+  display: grid;
+  grid-template-columns: repeat(var(--LinkBoardContainersPerRow), 1fr);
+  /*1fr = 1 Fraction of remaining length */
+  grid-gap: 8em;
+}
+
+.linkBoard {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.35);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.linkBoardHead {
+  background-color: rgba(128, 128, 128, 0.45);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  font-size: 2rem;
+}
+
+.linkContainer {
+  margin-top: 0.4em;
+  text-decoration: underline;
+  color: var(--linkColor);
+}
+
+.linkContainer:hover {
+  color: var(--fgColor);
+}
+
+#currentTime {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: -16px;
+}
+
+#currentDate {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
