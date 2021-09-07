@@ -44,5 +44,5 @@ The background images themself can also be changed as long as their name is in a
 }
 ```
 ## Inspired By
-[MinTab](https://github.com/lr-tech/MinTab) <br>
+[MinTab](https://github.com/lr-tech/MinTab) <br><br>
 ![Example2](imgs/Example2.PNG)
