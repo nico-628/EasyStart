@@ -34,10 +34,7 @@ const LinkBoards = [
         name: "Wetterochs",
         link: "https://www.wetterochs.de"
       },
-      {
-        name: "heise",
-        link: "https://www.heise.de/"
-      },
+      
       {
         name: "Punch",
         link: "https://punchdrink.com/"
