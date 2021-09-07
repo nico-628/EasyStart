@@ -6,8 +6,7 @@
   --leftMargin: 10%;
   --LinkBoardContainersPerRow: 3;
   --numberOfBackgroundImages: 9;
-  --animationSpeed: 0.2s;
-  /* speed for animations when hovering/resizing */
+  --idxForFixedBackgroundImage: -1; /* if not -1, Background Image will be fixed to certain index */ 
 }
 
 * {
@@ -43,15 +42,13 @@ body {
   width: 80%;
   margin-top: 15%;
   margin-left: var(--leftMargin);
-  grid-template-columns: 350px 1fr;
-  /*1fr = 1 Fraction of remaining length */
+  grid-template-columns: 350px 1fr; /*1fr = 1 Fraction of remaining length */
   grid-gap: 2em;
 }
 
 .gridForIcons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /*1fr = 1 Fraction of remaining length */
+  grid-template-columns: repeat(2, 1fr); /*1fr = 1 Fraction of remaining length */
 }
 
 .icon {
@@ -70,8 +67,7 @@ body {
 
 .gridLinkBoards {
   display: grid;
-  grid-template-columns: repeat(var(--LinkBoardContainersPerRow), 1fr);
-  /*1fr = 1 Fraction of remaining length */
+  grid-template-columns: repeat(var(--LinkBoardContainersPerRow), 1fr); /*1fr = 1 Fraction of remaining length */
   grid-gap: 8em;
 }
 
